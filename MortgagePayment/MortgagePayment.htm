@@ -1,0 +1,85 @@
+﻿<html>
+<head>
+    <title>Morgage payment</title>
+	<style type="text/css">
+</style>
+	<link href="MortgagePayment.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form>
+    <h1 class="auto-style1"> Mortgage payement</h1>
+    <div class="auto-style1">
+    Mortgage Option&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number"  id="mortgage"/>
+    </div>
+    <p class="auto-style1"/>
+    Down payement option:&nbsp;&nbsp;&nbsp;
+    <input type="radio"  id="5%" onclick="m5p()" />5%&nbsp;
+    <input type="radio"  id="10%" onclick="m10p()" />10%&nbsp;
+    <input type="radio"  id="%15" onclick="m15p()" />15%&nbsp;
+    <input type="radio"  id="20%" onclick="m20p()" />20%
+    <!--<input type="button" onclick="m5p()" />-->
+    <p class="auto-style1"/>
+    Down payement:&nbsp;&nbsp;&nbsp;
+    <input type="number" id="downPayement" disabled />
+    <p class="auto-style1"/>
+    Amortization:&nbsp;&nbsp;&nbsp;
+    <input type="radio" id="25y" />25 years&nbsp;
+    <input type="radio" id="30y" />30 years
+    <p class="auto-style1"/>
+    Interest rate:&nbsp;&nbsp;&nbsp;
+    <input type="Text" id="iRate" name="txtIRate" value="3%" disabled />
+    <p class="auto-style1"/>
+    <input type="button" id="monthlyPayement" onclick="k2m()" value="Calculate Monthly Payement" />
+    </form>
+    
+    <!--<script>
+        var mor = document.getElementById("mortgage")
+        var per5 = document.getElementById("5%")
+        var per10 = document.getElementById("10%")
+        var per15 = document.getElementById("15%")
+        var per20 = document.getElementById("20%")
+        var dPayement = document.getElementById("downPayement")
+        var amor1 = document.getElementById("25y")
+        var amor2 = document.getElementById("30y")
+        var iRate = document.getElementById("iRate")
+        var mPayement = document.getElementById("monthlyPayement")
+
+        per5 = 0.05;
+        per10 = 0.10;
+        per15 = 0.15;
+        per20 = 0.20;
+        amor1 = 25;
+        amor2 = 30;
+        iRate = 0.03;
+
+        function m5p() {
+            dPayement.value = mor.value * per5
+            
+        }
+        function m10p() {
+            dPayement.value = mor.value * per10
+        }
+        function m15p() {
+            dPayement.value = mor.value * per15
+        }
+        function m20p() {
+            dPayement.value = mor.value * per20
+        }
+
+        function k2m() {
+            mPayement.value = (((mor.value - dPayement.value) * 0.03) + ((mor.value - dPayement.value) / amor1)) / 12
+        }
+        function k2m() {
+            mPayement.value = (((mor.value - dPayement.value) * 0.03) + ((mor.value - dPayement.value) / amor2)) / 12
+        }
+
+
+
+
+        
+
+    </script>-->
+    <script src="MortgagePayment.js"></script>
+</body>
+</html>
